@@ -1,0 +1,10 @@
+MASTER SERVICE AGREEMENT
+Effective Date: January 1, 2026
+Supplier: GlobalTech Solutions
+Client: Primary Operations HQ
+
+1. Service Level Agreement (SLA):
+The Supplier guarantees a system uptime of 99.9%. If uptime falls below this metric, Client receives a 10% credit.
+
+2. Termination Clause:
+Either party can terminate with 30 days notice. Immediate termination allowed for data breaches.
