@@ -23,7 +23,7 @@ embeddings = OllamaEmbeddings(model="nomic-embed-text")
 def setup_rag():
     loader = TextLoader("data/supplier_contract_v1.txt")
     docs = loader.load()
-    splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=0)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
     splits = splitter.split_documents(docs)
     
     db = Chroma.from_documents(splits, embeddings)
