@@ -4,7 +4,10 @@ from tools import get_supplier_metrics, search_contract
 
 llm = ChatOllama(model="llama3.2", temperature=0)
 tools = [get_supplier_metrics, search_contract]
-agent_executor = create_react_agent(llm, tools)
+
+system_message = "You are a procurement AI. Use the provided tools to answer questions. If you don't know, say you don't know."
+agent_executor = create_react_agent(llm, tools, state_modifier=system_message)
+
 
 def chat(prompt):
     print(f"\nQuery: {prompt}")
@@ -14,3 +17,5 @@ def chat(prompt):
 
 if __name__ == "__main__":
     chat("What is the risk level for GlobalTech Solutions?")
+    chat("What is the SLA uptime guarantee in the contract?")
+    chat("Summarize GlobalTech Solutions including their spend and contract termination rules.")
