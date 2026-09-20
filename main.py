@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from langchain_ollama import ChatOllama
 from langgraph.prebuilt import create_react_agent
 from tools import get_supplier_metrics, search_contract
